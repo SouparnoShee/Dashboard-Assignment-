@@ -1,0 +1,167 @@
+@import "mixins";
+@import "variables";
+
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+//* Styling The Header
+
+.AppHeader{
+    height: 80px;
+    @include Allflex(row, space-between);
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+
+    box-shadow: 3px 3px 8px #ddd;
+
+    .Header_RightContent{
+        padding: 0px 8px;
+
+        Image{
+            margin-bottom: 20px;
+        }
+
+        .ball{
+            height: 20px;
+            width: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .logoTitles{
+            margin-bottom: 10px;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 24px;
+        }
+        h5{
+            margin-left: 20px;
+        }
+    }
+    .Header_LeftContent{
+        margin-right: 30px;
+
+        .HeaderDoc_Button{
+            padding: 10px 30px;
+            color: #fff;
+            cursor: pointer;
+            background: $PrimaryColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 14px;
+
+            &:hover{
+                background: $PrimaryColor;
+            }
+
+            .fa-file-lines{
+                margin-right: 4px;
+            }
+        }
+        .HeadLang_Button{
+            padding: 10px 30px;
+            color: $PrimaryColor;
+            background: $SecondaryColor;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover{
+                background: #ffd7d5;
+            }
+
+            .fa-earth-americas{
+                margin-right: 4px;
+            }
+        }
+        .UserLogo{
+            padding: 12px 14px;
+            border-radius: 50%;
+            border: 1px solid black;
+
+            .fa-user{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.Dropdown{
+    padding: 20px 50px;
+}
+
+.DropdownButton{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: $PrimaryColor;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+
+
+// *Styling Body(Menu and Content)
+.menu_content{
+    @include Bodyflex;
+}
+
+
+
+
+
+
+// *Styling  the side menu
+
+.SideMenu{
+    box-shadow: $Shadow;
+}
+.Menu_items{
+    font-size: 14px;
+}
+
+
+
+
+
+
+//* Styling Pagecontent
+
+.PageContent{
+    width: 90vw;
+    height: 90vh;
+    @include Allflex(column, space-around);
+    background-color: $SecondaryColor;
+    background: url(./assets/Vector.png) no-repeat;
+}
+
+
+
+
+
+// * Styling TableContents 
+
+.TableBox{
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: $Shadow;
+    border-radius: 15px;
+}
+.TableContents{
+    height: 70vh;
+    width: 70vw;
+}
+
